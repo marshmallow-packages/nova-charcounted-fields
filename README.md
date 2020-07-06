@@ -22,10 +22,12 @@ You can use the text and textarea fields with charactercounters on you Nova mode
 
 ```php
 TextCounted::make('Meta title')
+	->minChars(30)
     ->maxChars(60)
     ->warningAt(50),
 
 TextareaCounted::make('Meta description')
+	->minChars(70)
     ->maxChars(160)
     ->warningAt(150),
 ```
