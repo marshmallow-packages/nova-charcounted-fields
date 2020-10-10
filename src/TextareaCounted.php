@@ -2,8 +2,6 @@
 
 namespace Marshmallow\CharcountedFields;
 
-use Marshmallow\CharcountedFields\FieldCounted;
-
 class TextareaCounted extends FieldCounted
 {
     /**
