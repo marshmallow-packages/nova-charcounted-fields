@@ -1,5 +1,5 @@
 <template>
-    <DefaultField :field="field">
+    <default-field :field="field">
         <template #field>
             <div class="relative">
                 <textarea
@@ -9,19 +9,19 @@
                     :placeholder="field.name"
                 ></textarea>
 
-                <charcounter
+                <Charcounter
                     :value="value"
                     :min-chars="field.minChars"
                     :max-chars="field.maxChars"
                     :warning-threshold="field.warningAt"
-                ></charcounter>
+                ></Charcounter>
             </div>
 
             <p v-if="hasError" class="my-2 text-danger">
                 {{ firstError }}
             </p>
         </template>
-    </DefaultField>
+    </default-field>
 </template>
 
 <script>

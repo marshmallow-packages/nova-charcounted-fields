@@ -10,12 +10,12 @@
                     :placeholder="field.name"
                 />
 
-                <charcounter
+                <Charcounter
                     :value="value"
                     :min-chars="field.minChars"
                     :max-chars="field.maxChars"
                     :warning-threshold="field.warningAt"
-                ></charcounter>
+                ></Charcounter>
             </div>
 
             <p v-if="hasError" class="my-2 text-danger">

@@ -1,5 +1,9 @@
 <template>
-    <PanelItem :field="field" />
+    <PanelItem :field="field">
+        <template #value>
+            <span>{{ field.value }}</span>
+        </template>
+    </PanelItem>
 </template>
 
 <script>
