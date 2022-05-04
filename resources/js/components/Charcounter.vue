@@ -1,7 +1,7 @@
 <template>
     <p class="text-right font-bold opacity-50 text-80 text-xs mt-2">
-        <span :class="indicatorClass">{{ value.length }}</span>
-        <span v-if="maxChars"> / {{ maxChars }}</span>
+        <span :class="indicatorClass">{{ value.length }}</span
+        ><span v-if="maxChars"> / {{ maxChars }}</span>
     </p>
 </template>
 
@@ -10,26 +10,26 @@
         props: ["value", "minChars", "maxChars", "warningThreshold"],
 
         computed: {
-            indicatorClass: function() {
+            indicatorClass: function () {
                 if (this.minChars) {
                     if (this.value.length < this.minChars) {
-                        return "text-danger";
+                        return "text-danger text-red-500";
                     }
                 }
 
                 if (this.maxChars) {
                     if (this.value.length > this.maxChars) {
-                        return "text-danger";
+                        return "text-danger text-red-500";
                     }
                 }
 
                 if (this.warningThreshold) {
                     if (this.value.length > this.warningThreshold) {
-                        return "text-orange";
+                        return "text-orange text-orange-500";
                     }
                 }
 
-                return "text-success";
+                return "text-success text-green-500";
             },
         },
     };
