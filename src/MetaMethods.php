@@ -2,9 +2,7 @@
 
 namespace Marshmallow\CharcountedFields;
 
-use Laravel\Nova\Fields\Field;
-
-class FieldCounted extends Field
+trait MetaMethods
 {
     public function minChars(int $characters)
     {
