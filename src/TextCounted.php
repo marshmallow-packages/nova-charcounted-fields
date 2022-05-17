@@ -2,8 +2,12 @@
 
 namespace Marshmallow\CharcountedFields;
 
-class TextCounted extends FieldCounted
+use Laravel\Nova\Fields\Field;
+use Marshmallow\CharcountedFields\MetaMethods;
+
+class TextCounted extends Field
 {
+    use MetaMethods;
     /**
      * The field's component.
      * @var string
